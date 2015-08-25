@@ -2,7 +2,7 @@
 " File:   iamroot_comment.vim 
 " Brief:  코드 분석용 자동 주석 플러그인
 " Detail: 1. FileSummary:   파일의 정보 요약
-"         2. DailySummary:    당일 참석인원, 참석자 요약
+"         2. DailySummary:  당일 참석인원, 참석자 요약
 "         3. AnalyzingCode: 코드 분석 주석
 "
 " Usage:  이 플러그인을 사용하기 위해서, 
@@ -31,7 +31,7 @@ let s:authors = {
     \  8: { 'att': 1, 'name': '김관진', 'email': 'general@korea.com' },
     \  9: { 'att': 0, 'name': '이영호', 'email': 'weapon@terminator.com' },
     \ 10: { 'att': 1, 'name': '김택용', 'email': 'revolution@protoss.starcraft' },
-    \ 11: { 'att': 0, 'name': '', 'email': '' },
+    \ 11: { 'att': 1, 'name': '테스트', 'email': 'none' },
     \ 12: { 'att': 0, 'name': '', 'email': '' },
     \ 13: { 'att': 0, 'name': '', 'email': '' },
     \ 14: { 'att': 0, 'name': '', 'email': '' },

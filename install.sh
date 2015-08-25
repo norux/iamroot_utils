@@ -6,7 +6,7 @@ PLUGIN_PATH=$HOME/.vim/plugin
 
 # copy plugin to ~/.vim/plugin
 mkdir -p $PLUGIN_PATH
-cp $BASEDIR/iamroot_comment.vim $PLUGIN_PATH
+cp $BASEDIR/plugin/iamroot_comment.vim $PLUGIN_PATH
 
 
 # for key mapping (add lines to ~/.vimrc)
