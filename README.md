@@ -1,9 +1,9 @@
 ## Iamroot ARM Kernel 분석 12차 D조
 
-[iamroot](http://www.iamroot.org)
+[iamroot 홈페이지](http://www.iamroot.org)
 
 
-### iamroot_kernel.vim 
+### iamroot_comment.vim 
 
 * 이 vim 플러그인은 주석을 보다 쉽게 달기 위해 제작된 플러그인입니다.
 
