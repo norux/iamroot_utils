@@ -22,7 +22,7 @@ let s:teamName = "Iamroot ARM Kernel 분석 12차 D조"
 let s:teamLink = "http://www.iamroot.org"
 let s:authors = {
     \  1: { 'att': 1, 'name': '곽희범', 'email': 'kh-1143@hanmail.net' },
-    \  2: { 'att': 1, 'name': '박보영', 'email': 'godof@high.scool' },
+    \  2: { 'att': 1, 'name': '임채훈', 'email': 'im.fehead@gmail.com' },
     \  3: { 'att': 0, 'name': '정성욱', 'email': 'k_hubert@naver.com' },
     \  4: { 'att': 0, 'name': '정유정', 'email': 'night@of.7years' },
     \  5: { 'att': 1, 'name': '김영하', 'email': 'mnemonic@system.murderer' },
