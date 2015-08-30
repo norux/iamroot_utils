@@ -21,7 +21,7 @@ $ ./install.sh
 > 복원 시에는 백업파일을 ~/.vimrc 로 대체 하시면 됩니다.
 
 > ```bash
-  cp backup/vimrc.back.TIME ~/.vimrc
+  $ cp backup/vimrc.back.TIME ~/.vimrc
   ```
 
 ### vimrc
