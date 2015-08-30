@@ -59,6 +59,7 @@ set nocsverb
 cs add /home/noru/git/linux/cscope.out
 set csverb
 set csto=0
+set csre
 set cst
 
 
