@@ -25,7 +25,7 @@ let s:authors = {
     \  2: { 'att': 1, 'name': '임채훈', 'email': 'im.fehead@gmail.com' },
     \  3: { 'att': 0, 'name': '타블로', 'email': 'epik@high.music' },
     \  4: { 'att': 0, 'name': '정유정', 'email': 'night@of.7years' },
-    \  5: { 'att': 1, 'name': '김영하', 'email': 'mnemonic@system.murderer' },
+    \  5: { 'att': 1, 'name': '곽승준', 'email': 'rialtoksj@yahoo.com' },
     \  6: { 'att': 1, 'name': '팀  쿡', 'email': 'apple@comming.out' },
     \  7: { 'att': 0, 'name': '이세돌', 'email': 'baduk@genius.world' },
     \  8: { 'att': 1, 'name': '김관진', 'email': 'general@korea.com' },
