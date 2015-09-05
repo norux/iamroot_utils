@@ -23,7 +23,7 @@ let s:teamLink = "http://www.iamroot.org"
 let s:authors = {
     \  1: { 'att': 1, 'name': '곽희범', 'email': 'kh-1143@hanmail.net' },
     \  2: { 'att': 1, 'name': '임채훈', 'email': 'im.fehead@gmail.com' },
-    \  3: { 'att': 0, 'name': '타블로', 'email': 'epik@high.music' },
+    \  3: { 'att': 0, 'name': '정성욱', 'email': 'k_hubert@naver.com' },
     \  4: { 'att': 0, 'name': '정유정', 'email': 'night@of.7years' },
     \  5: { 'att': 1, 'name': '김영하', 'email': 'mnemonic@system.murderer' },
     \  6: { 'att': 1, 'name': '팀  쿡', 'email': 'apple@comming.out' },
