@@ -3,10 +3,10 @@ set ai
 set si
 set ci
 set sw=4
-set ts=4
+set ts=8
 "set ignorecase
 set hlsearch
-set expandtab
+"set expandtab
 set bg=dark
 set nocompatible
 set fileencodings=utf-8,euc-kr
@@ -23,10 +23,10 @@ set ls=2	"last statusbar
 syntax on
 
 "============= vim 창 크기 조절 ============
-nmap <s-h> <C-W><
-nmap <s-j> <C-W>-
-nmap <s-k> <C-W>+
-nmap <s-l> <C-W>>
+"nmap <s-h> <C-W><
+"nmap <s-j> <C-W>-
+"nmap <s-k> <C-W>+
+"nmap <s-l> <C-W>>
 
 "============= vim 창이동 ============
 nmap <c-k> <c-w>k
