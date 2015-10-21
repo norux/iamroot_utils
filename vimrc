@@ -22,6 +22,10 @@ set ls=2	"last statusbar
 
 syntax on
 
+set cindent
+set dy+=lastline
+set formatoptions+=r    " 주석 자동 처리
+setlocal comments-=://  " // 자동 주석 제거
 "============= vim 창 크기 조절 ============
 "nmap <s-h> <C-W><
 "nmap <s-j> <C-W>-
