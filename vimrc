@@ -2,7 +2,7 @@ set nu
 set ai
 set si
 set ci
-set sw=4
+set sw=8
 set ts=8
 "set ignorecase
 set hlsearch
