@@ -21,6 +21,7 @@ set wmnu
 set ls=2	"last statusbar
 
 syntax on
+set cc=80	" 80라인 컬럼 표시
 
 set cindent
 set dy+=lastline
