@@ -18,10 +18,10 @@
 "         http://iamroot.org
 " =======================================================
 
-let s:teamName = "Iamroot ARM Kernel 분석 12차 D조"
+let s:teamName = "IAMROOT-12D"
 let s:teamLink = "http://www.iamroot.org"
 let s:authors = {
-    \  1: { 'att': 1, 'name': '곽희범', 'email': 'kh-1143@hanmail.net' },
+    \  1: { 'att': 1, 'name': '곽희범', 'email': 'andrew@norux.me' },
     \  2: { 'att': 1, 'name': '임채훈', 'email': 'im.fehead@gmail.com' },
     \  3: { 'att': 1, 'name': '한대현', 'email': 'rhrnak0501@gmail.com' },
     \  4: { 'att': 1, 'name': '민혜미', 'email': 'mhyem2@naver.com' },
@@ -34,7 +34,7 @@ let s:authors = {
     \ 11: { 'att': 1, 'name': '곽승준', 'email': 'rialtoksj@yahoo.com' },
     \ 12: { 'att': 1, 'name': '배병휴', 'email': 'isswindx@gmail.com' },
     \ 13: { 'att': 1, 'name': '김영준', 'email': 'iam.yeongjunkim@gmail.com' },
-    \ 14: { 'att': 1, 'name': '박종성', 'email': 'jongsong.park@gmail.com' },
+    \ 14: { 'att': 1, 'name': '박종성', 'email': '@minidump' },
     \ 15: { 'att': 1, 'name': '박병배', 'email': 'i.billpark@gmail.com' },
     \ 16: { 'att': 1, 'name': '안종찬', 'email': 'ahnchan2@gmail.com' },
     \ 17: { 'att': 1, 'name': '이상선', 'email': 'razr1121@gmail.com' },
@@ -131,42 +131,43 @@ endfunction
 " Name:  s:StartComments
 " Brief: 주석 시작부
 function s:StartComments()
+    let l:date   = s:GetDate()
     exec "normal O"
-	exec "normal I" . "/* ==================================================================" . s:cr
+    exec "normal I" . "/* ". s:teamName . " (" . l:date . "):" . s:cr
 endfunction
 
 " Name:  s:BarComments
 " Brief: 주석 바
 function s:BarComments()
-	exec "normal I" . " * ------------------------------------------------------------------" . s:cr
+    exec "normal I" . " * --------------------------" . s:cr
 endfunction
 
 " Name:  s:EndComments
 " Brief: 주석 마무리부
 function s:EndComments()
-	exec "normal I" . " * ==================================================================" . s:cr
-	exec "normal I" . " */"
-	exec "normal w"
+    exec "normal I" . " */"
+    exec "normal w"
 endfunction
 
 
 " Name:  IC_FileSummary
 " Brief: 파일의 요약정보를 주석으로 남긴다.
 function IC_FileSummary()
-	let l:todo = "todo"
+    let l:todo = "todo"
     let l:filePath = s:GetProjectFilePath()
-	let l:date    = s:GetDate()
-	let l:team    = s:GetTeamInfo()
+    let l:date    = s:GetDate()
+    let l:team    = s:GetTeamInfo()
 
     exec "normal gg"
     call s:StartComments()
-	exec "normal I" . " * 파일명: " . l:filePath . s:cr
-	exec "normal I" . " *" . s:cr
-	exec "normal I" . " * 요약:   " . l:todo . s:cr
-	exec "normal I" . " * 설명:   " . l:todo . s:cr
-	exec "normal I" . " *" . s:cr
-	exec "normal I" . " * 팀:   " . l:team . s:cr
-	exec "normal I" . " * 날짜: " . l:date . s:cr
+    call s:BarComments()
+    exec "normal I" . " * 파일명: " . l:filePath . s:cr
+    exec "normal I" . " *" . s:cr
+    exec "normal I" . " * 요약:   " . l:todo . s:cr
+    exec "normal I" . " * 설명:   " . l:todo . s:cr
+    exec "normal I" . " *" . s:cr
+    exec "normal I" . " * 팀:   " . l:team . s:cr
+    exec "normal I" . " * 날짜: " . l:date . s:cr
     call s:EndComments()
 endfunction
 
@@ -175,30 +176,26 @@ endfunction
 " Brief: 당일의 요약정보를 주석으로 남긴다.
 function IC_DailySummary()
     let l:filePath = s:GetProjectFilePath()
-	let l:date   = s:GetDate()
-	let l:team   = s:GetTeamInfo()
+    let l:date   = s:GetDate()
+    let l:team   = s:GetTeamInfo()
 
     call s:StartComments()
-	exec "normal I" . " * 제 00차 스터디" . s:cr
-	exec "normal I" . " * 날짜: " . l:date . s:cr
-	exec "normal I" . " * 장소: " . s:cr
-	exec "normal I" . " *" . s:cr
-	exec "normal I" . " * 팀:     " . l:team . s:cr
-	call s:PrintParticipantsInfo()
-	call s:EndComments()
+    call s:BarComments()
+    exec "normal I" . " * 제 00차 스터디" . s:cr
+    exec "normal I" . " * 날짜: " . l:date . s:cr
+    exec "normal I" . " * 장소: " . s:cr
+    exec "normal I" . " *" . s:cr
+    exec "normal I" . " * 팀:     " . l:team . s:cr
+    call s:PrintParticipantsInfo()
+    call s:EndComments()
 endfunction
 
 
 " Name:  IC_AnalyzingCode
 " Brief: 분석한 코드의 주석을 상세히 남기기 위한 포맷
 function IC_AnalyzingCode()
-	let l:date   = s:GetDate()
-	let l:team   = s:GetTeamInfo()
-
-	call s:StartComments()
-	exec "normal I" . " * 팀:   " . l:team . s:cr
-	exec "normal I" . " * 날짜: " . l:date . s:cr
+    call s:StartComments()
     call s:BarComments()
     exec "normal I" . " * " . s:cr
-	call s:EndComments()
+    call s:EndComments()
 endfunction
