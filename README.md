@@ -49,3 +49,5 @@ $ ./install.sh
 * [F6] Daily Summary: 매일의 요약입니다. 스터디 날짜, 장소, 참석자 정보 등을 담고 있습니다. 
 
 * [F7] File Summary: 파일의 전체적인 요약, 설명을 위한 주석입니다.
+
+* [F9] change Kernel Tab step: 커널 분석용 tab step 8로 변경한다.
