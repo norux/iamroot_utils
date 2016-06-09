@@ -2,7 +2,7 @@ set nu
 set ai
 set si
 set ci
-set sw=4 ts=4 sts=4	" 일반용, <F9>:커널 분석용
+set sw=8 ts=8 sts=8	"<F8>일반용, <F9>:커널 분석용
 "set ignorecase
 set hlsearch
 "set expandtab
@@ -22,9 +22,9 @@ set ls=2	"last statusbar
 syntax on
 set cc=80	" 80라인 컬럼 표시
 
-set dy+=lastline
-set formatoptions+=r    " 주석 자동 처리
-setlocal comments-=://  " // 자동 주석 제거
+" set dy+=lastline
+" set formatoptions+=r    " 주석 자동 처리
+" setlocal comments-=://  " // 자동 주석 제거
 colorscheme ron
 if has("gui_running")
 	if has("gui_gtk2")
@@ -174,9 +174,17 @@ vmap <c-x> <esc>:call CmtOff() <cr>
 nmap <c-c> v:call CmtOn() <cr>
 nmap <c-x> v:call CmtOff() <cr>
 
+" visual 클립보드 복사
+vmap <F3> "+y
+" 클립보드 내용 붙여 넣기
+nmap <F4> "+p
+
 nmap <F5> :call IC_AnalyzingCode() <cr>
 nmap <F6> :call IC_DailySummary() <cr>
 nmap <F7> :call IC_FileSummary() <cr>
+nmap <F8> A<tab>/* IAMROOT-12D: 
 
 " 커널분석용 설정
 nmap <F9> :set ts=8 sw=8 sts=8 <cr>
+" 일반 문서용 
+nmap <F10> :set ts=4 sw=4 sts=4 <cr>
