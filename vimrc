@@ -2,12 +2,11 @@ set nu
 set ai
 set si
 set ci
-set sw=4
-set ts=8
+set sw=8 ts=8 sts=8	"<F8>일반용, <F9>:커널 분석용
 "set ignorecase
 set hlsearch
 "set expandtab
-set bg=dark
+"set bg=dark
 set nocompatible
 set fileencodings=utf-8,euc-kr
 set history=1000
@@ -21,7 +20,27 @@ set wmnu
 set ls=2	"last statusbar
 
 syntax on
+set cc=80	" 80라인 컬럼 표시
 
+" set dy+=lastline
+" set formatoptions+=r    " 주석 자동 처리
+" setlocal comments-=://  " // 자동 주석 제거
+colorscheme ron
+if has("gui_running")
+	if has("gui_gtk2")
+		set guifont=나눔고딕코딩\ 12
+	elseif has("gui_photon")
+		set guifont=나눔고딕코딩:s12
+	elseif has("gui_kde")
+		set guifont=나눔고딕코딩:/12/-1/5/50/0/0/0/1/0
+	elseif has("x11")
+		set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
+	else
+		set guifont=나눔고딕코딩:h12:cDEFAULT
+	endif
+
+	colorscheme koehler
+endif
 "============= vim 창 크기 조절 ============
 "nmap <s-h> <C-W><
 "nmap <s-j> <C-W>-
@@ -52,11 +71,11 @@ nmap ,0 :b!0<CR>	  " Switch to File Buffer #0
 
 
 "============ ctags, scope 경로 ===========
-set tags+=/home/noru/git/linux/tags
+set tags+=$HOME/git/linux/tags
 
 set csprg=/usr/bin/cscope
 set nocsverb
-cs add /home/noru/git/linux/cscope.out
+cs add $HOME/git/linux/cscope.out
 set csverb
 set csto=0
 set csre
@@ -155,6 +174,17 @@ vmap <c-x> <esc>:call CmtOff() <cr>
 nmap <c-c> v:call CmtOn() <cr>
 nmap <c-x> v:call CmtOff() <cr>
 
+" visual 클립보드 복사
+vmap <F3> "+y
+" 클립보드 내용 붙여 넣기
+nmap <F4> "+p
+
 nmap <F5> :call IC_AnalyzingCode() <cr>
 nmap <F6> :call IC_DailySummary() <cr>
 nmap <F7> :call IC_FileSummary() <cr>
+nmap <F8> A<tab>/* IAMROOT-12D: 
+
+" 커널분석용 설정
+nmap <F9> :set ts=8 sw=8 sts=8 <cr>
+" 일반 문서용 
+nmap <F10> :set ts=4 sw=4 sts=4 <cr>
